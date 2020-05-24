@@ -15,7 +15,7 @@ import stemmer from 'stemmer';
 
 var app = express();
 
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 app.get('/product', function(req, res) {
     const raw_name = req.query.productName.trim();
